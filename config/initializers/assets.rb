@@ -12,6 +12,7 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( jquery.js )
 Rails.application.config.assets.precompile += %w( mapsgoogle.js )
 Rails.application.config.assets.precompile += %w( routes.js )
+Rails.application.config.assets.precompile += %w( teste.js )
 Rails.application.config.assets.precompile += %w( apigm.js )
 Rails.application.config.assets.precompile += %w( bootstrap.min.css )
 Rails.application.config.assets.precompile += %w( style.css )
