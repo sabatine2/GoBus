@@ -1,4 +1,4 @@
-﻿var map;
+var map;
 var marker;
 var flightPath;
 var listaPontos = new Array();
@@ -12,8 +12,8 @@ function initialize() {
 
    
    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-	
-	
+  
+  
    // Evento que detecta o click no mapa para criar o marcador
    google.maps.event.addListener(map, "click", function(event) {
 
@@ -26,7 +26,7 @@ function initialize() {
       // A API ignora os valores além da 6ª casa decimal
       var lat = event.latLng.lat().toFixed(6);
       var lng = event.latLng.lng().toFixed(6);
-	
+  
       // A criação do marcador é feita na função createMarker() e
       // passamos os valores das coordenadas do click através
       // dos parâmetros lat e lng.
@@ -35,8 +35,8 @@ function initialize() {
       // getCoords() actualiza os valores de Latitue e Longitude
       // das caixas de texto existentes no topo da página
       getCoords(lat, lng);
-	  
-	 
+    
+   
 
    });
 
@@ -75,9 +75,9 @@ function createMarker(lat, lng) {
       // Define a posição do marcador através dos valores lat e lng
       // que foram definidos através do click no mapa
       position: new google.maps.LatLng(lat, lng),
-	  
-	  //armazena no array a latitude e longitude
-	 
+    
+    //armazena no array a latitude e longitude
+   
       // Esta opção permite que o marcador possa ser arrastado
       // para um posicionamento com maior precisão.
       draggable: true,

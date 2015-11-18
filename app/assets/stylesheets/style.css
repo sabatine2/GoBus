@@ -6,15 +6,6 @@ body {
 	margin: 0;
 	padding: 0;
 }
-.coordenadas {
-	height: 5%;
-	width: 100%;
-	display: inline;
-	margin-left: 15px;
-}
-label {
-	margin-left: 15px;
-}
 
 #map-canvas
 {
@@ -38,10 +29,6 @@ label {
 #conteudo-form{
 	width:40%;
 	margin: 0 auto;
-}
-
-.logo{
-	width:40%;
 }
 
 .conteudo-form{
