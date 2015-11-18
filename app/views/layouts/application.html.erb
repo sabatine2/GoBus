@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gobus - Dashboard</title>
+  <%= stylesheet_link_tag "sb-admin" %>
+  <%= stylesheet_link_tag "bootstrap.min" %>
+  <%= stylesheet_link_tag "style" %>
+  <%= javascript_include_tag "jquery" %>
+  <!-- Google Maps -->
+  <%= javascript_include_tag "apigm" %>
+  <%= javascript_include_tag "mapsgoogle" %>
+  <%= csrf_meta_tags %>
+</head>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">GoBus - Painel de Controle</a>
+            </div>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <%= link_to 'Usuários', usuarios_path, :method => :get %>
+                    </li>
+                    <li>
+                        <%= link_to 'Ônibus', onibuses_path, :method => :get %>
+                    </li>
+                    <li>
+                        <%= link_to 'Linhas', linhas_path, :method => :get %>
+                    </li>
+                    <li>
+                        <%= link_to 'Pontos', pontos_path, :method => :get %>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    <!-- Navgation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- Navbar-Header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">GoBus - Painel de Controle</a>
+        </div>
+        <!-- /.Navbar-Header -->
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    </nav>
+    <!-- /.Navgation -->
+
+    <!-- Body -->
+    <body>
+	   <div id="wrapper">
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <!-- Conteúdo -->
+                    <%= yield %>
+                    <!-- /.Conteúdo -->
+                </div>
+                <!-- /.Container-Fluid -->
+            </div>
+            <!-- /.Page-Wrapper -->
+        </div>
+    </body>
+    <!-- /.Body -->
+ 
+    <script type="text/javascript" src="../assets/mapsgoogle.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</html>
+

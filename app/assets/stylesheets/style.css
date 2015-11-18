@@ -1,0 +1,50 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.coordenadas {
+	height: 5%;
+	width: 100%;
+	display: inline;
+	margin-left: 15px;
+}
+label {
+	margin-left: 15px;
+}
+
+#map-canvas
+{
+	width: 60%;
+	height: 400px;
+}
+
+.panel-body
+{
+	width: 100%;
+}
+
+#iw_container .iw_title {
+	font-size: 16px;
+	font-weight: bold;
+}
+.iw_content {
+	padding: 15px 15px 15px 0;
+}
+
+#conteudo-form{
+	width:40%;
+	margin: 0 auto;
+}
+
+.logo{
+	width:40%;
+}
+
+.conteudo-form{
+	width:80%;
+	margin: 0 auto;
+}

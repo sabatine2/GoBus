@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-lg-12">
+      <br>
+        <h1 class="page-header">
+          GoBus <small>- Seu tempo em suas mãos</small>
+        </h1>
+        <ol class="breadcrumb">
+          <li class="active">
+            <i class="fa fa-home"></i>  Painel de Controle
+          </li>
+        </ol>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><i class="fa fa-fw fa-map-marker"></i> Rotas</h3>
+        </div>
+        <div class="panel-body table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Destino</th>
+                <th>Origem</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @rota.each do |rotum| %>
+                <tr>
+                  <td><%= rotum.destino %></td>
+                  <td><%= rotum.origem %></td>
+                  <td><%= button_to 'Mostrar', rotum, :class => "btn btn-success", :method => :get %></td>
+                  <td><%= button_to 'Editar', edit_rotum_path(rotum), :class => "btn btn-success", :method => :get %></td>
+                  <td><%= button_to 'Deletar', rotum, :class => "btn btn-danger" ,method: :delete %></td>
+                </tr>
+              <% end %>
+             </tbody>
+          </table>
+          <br>
+          <div>
+            <%= button_to 'Nova Rota', new_rotum_path, :class => "btn btn-primary center-block", :method => :get %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
