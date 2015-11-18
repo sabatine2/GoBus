@@ -7,8 +7,7 @@
   <%= stylesheet_link_tag "style" %>
   <%= javascript_include_tag "jquery" %>
   <!-- Google Maps -->
-    <script type="text/javascript" src="../assets/mapsgoogle.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <%= javascript_include_tag "apigm" %>
   <%= csrf_meta_tags %>
 </head>
 
@@ -76,6 +75,8 @@
         </div>
     </body>
     <!-- /.Body -->
-
+ 
+    <script type="text/javascript" src="../assets/mapsgoogle.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 </html>
 
