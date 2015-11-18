@@ -122,21 +122,3 @@ function getCoords(lat, lng) {
    // Actualiza o valor do input 'lng'
    coords_lng.value = lng;
 }
-
-function addPonto(lat,lng){
-     var point = new google.maps.LatLng(lat,lng);
-     listaPontos.push(point);
-     flightPath.setPath(listaPontos);
-}
-
-function getPonto(){
-	var x = document.getElementById("lat").value;
-	var y = document.getElementById("lng").value;
-	addPonto(x,y);
-}
-
-function delPonto(lat,lgn) {
-   var point = new google.maps.LatLng(lat,lng);
-   listaPontos.pop(point);
-   flightPath.setPath(listaPontos);
-}
