@@ -8,7 +8,10 @@
   <br>
     <div class="form-group">
       <%= f.label :destino, class: "control-label" %>
-      <%= f.text_field :destino, class: "form-control" %>
+      <%= f.text_field :destino, list: "destino", class: "form-control" %>
+      <datalist id="destino">
+        <option value="Teste">
+      </datalist>
     </div>
     <div class="form-group">
     <%= f.label :origem, class: "control-label" %>

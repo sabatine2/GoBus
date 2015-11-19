@@ -22,7 +22,40 @@
         	 <div class="main-wrapper">
 				      <%= render 'form' %><br>
 			     </div>
-           <!--div id="map-canvas" class="conteudo-form"></div-->
+           <div id="map"></div>
+    <div id="right-panel">
+    <div>
+    <b>Início:</b>
+    <select id="start">
+      <option value="Av. São Luís, Marília, SP">Av. São Luís</option>
+      <option value="Av. Men de Sá, Marília, SP">Av. Mem de Sá</option>
+      <option value="Rua Yukio Fuzii, Marília, SP">Rua Yukio Fuziy</option>
+      <option value="Av. Higino Muzi Filho, Marília, SP">Av. Higino Muzzi Filho</option>
+    </select>
+    <br>
+    <b>Rota:</b> <br>
+    <i>(Ctrl-Click for multiple selection)</i> <br>
+    <select multiple id="waypoints">
+      <option value="Av. São Luís, Marília, SP">Av. São Luís</option>
+      <option value="Av. Men de Sá, Marília, SP">Av. Mem de Sá</option>
+      <option value="Rua Yukio Fuzii, Marília, SP">Rua Yukio Fuziy</option>
+      <option value="Av. Higino Muzi Filho, Marília, SP">Av. Higino Muzzi Filho</option>
+    </select>
+    <br>
+    <b>Fim:</b>
+    <select id="end">
+      <option value="Av. São Luís, Marília, SP">Av. São Luís</option>
+      <option value="Av. Men de Sá, Marília, SP">Av. Mem de Sá</option>
+      <option value="Rua Yukio Fuzii, Marília, SP">Rua Yukio Fuziy</option>
+      <option value="Av. Higino Muzi Filho, Marília, SP">Av. Higino Muzzi Filho</option>
+    </select>
+    <br>
+      <input type="submit" id="submit">
+    </div>
+    <div id="directions-panel"></div>
+    </div>
+
+        <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBd5M-a0I27FeKt04_E-yaPZpMIplQEqV0&signed_in=true&callback=initMap" %>
           </div>
         </div>
       </div>
