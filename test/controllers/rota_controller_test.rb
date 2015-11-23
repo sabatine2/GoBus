@@ -18,7 +18,7 @@ class RotaControllerTest < ActionController::TestCase
 
   test "should create rotum" do
     assert_difference('Rotum.count') do
-      post :create, rotum: { destino: @rotum.destino, origem: @rotum.origem }
+      post :create, rotum: { destino: @rotum.destino, linha_id: @rotum.linha_id, origem: @rotum.origem }
     end
 
     assert_redirected_to rotum_path(assigns(:rotum))
@@ -35,7 +35,7 @@ class RotaControllerTest < ActionController::TestCase
   end
 
   test "should update rotum" do
-    patch :update, id: @rotum, rotum: { destino: @rotum.destino, origem: @rotum.origem }
+    patch :update, id: @rotum, rotum: { destino: @rotum.destino, linha_id: @rotum.linha_id, origem: @rotum.origem }
     assert_redirected_to rotum_path(assigns(:rotum))
   end
 

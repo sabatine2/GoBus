@@ -1,25 +1,25 @@
 <%= form_for(@linha) do |f| %>
-  <div id="conteudo-form" class="panel-body">
-    <% if @linha.errors.any? %>
-      <div id="error_explanation">
-        <h4 class="text-center"> Preencha todos os campos obrigatórios (*): </h4>
-      </div>
-    <% end %>
-  <br>
-    <div class="form-group"><br>
-      <%= f.label :numero, class: "control-label" %>
-      <%= f.number_field :numero, class: "form-control" %>
-    </div>
+  <% if @linha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@linha.errors.count, "error") %> prohibited this linha from being saved:</h2>
 
-    <div class="form-group">
-    <%= f.label :descricao, class: "control-label" %><br>
-    <%= f.text_field :descricao, class: "form-control" %>
+      <ul>
+      <% @linha.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
     </div>
-      <div id="conteudo-form" class="actions text-center"><br>
-        <div class="btn-group">
-          <%= f.submit 'Salvar', :class => 'btn btn-success' %>
-        </div>
-        <%= link_to 'Voltar', linhas_path, :class => 'btn btn-warning', :method => :get %>
-      </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numero %><br>
+    <%= f.number_field :numero %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br>
+    <%= f.text_field :descricao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
   </div>
 <% end %>

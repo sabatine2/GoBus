@@ -1,28 +1,29 @@
 <%= form_for(@rotum) do |f| %>
-  <div id="conteudo-form" class="panel-body">
   <% if @rotum.errors.any? %>
-      <div id="error_explanation">
-        <h4 class="text-center"> Preencha todos os campos obrigatórios (*): </h4>
-      </div>
-    <% end %>
-  <br>
-    <div class="form-group">
-      <%= f.label :destino, class: "control-label" %>
-      <%= f.text_field :destino, list: "destino", class: "form-control" %>
-      <datalist id="destino">
-        <option value="Teste">
-      </datalist>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rotum.errors.count, "error") %> prohibited this rotum from being saved:</h2>
+
+      <ul>
+      <% @rotum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
     </div>
-    <div class="form-group">
-    <%= f.label :origem, class: "control-label" %>
-    <%= f.text_field :origem, class: "form-control" %>
-    </div>
-      <div id="conteudo-form" class="actions text-center"><br>
-        <div class="btn-group">
-          <%= f.submit 'Salvar', :class => 'btn btn-success' %>
-        </div>
-        <%= link_to 'Voltar', rota_path, :class => 'btn btn-warning', :method => :get %>
-      </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :destino %><br>
+    <%= f.text_field :destino %>
+  </div>
+  <div class="field">
+    <%= f.label :origem %><br>
+    <%= f.text_field :origem %>
+  </div>
+  <div class="field">
+    <%= f.label :linha_id %><br>
+    <%= f.text_field :linha_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
   </div>
 <% end %>
-

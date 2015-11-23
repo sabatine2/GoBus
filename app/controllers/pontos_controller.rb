@@ -69,6 +69,6 @@ class PontosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ponto_params
-      params.require(:ponto).permit(:latitude, :longitude)
+      params.require(:ponto).permit(:latitude, :longitude, :rua_id)
     end
 end

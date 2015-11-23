@@ -18,7 +18,7 @@ class PontosControllerTest < ActionController::TestCase
 
   test "should create ponto" do
     assert_difference('Ponto.count') do
-      post :create, ponto: { latitude: @ponto.latitude, longitude: @ponto.longitude }
+      post :create, ponto: { latitude: @ponto.latitude, longitude: @ponto.longitude, rua_id: @ponto.rua_id }
     end
 
     assert_redirected_to ponto_path(assigns(:ponto))
@@ -35,7 +35,7 @@ class PontosControllerTest < ActionController::TestCase
   end
 
   test "should update ponto" do
-    patch :update, id: @ponto, ponto: { latitude: @ponto.latitude, longitude: @ponto.longitude }
+    patch :update, id: @ponto, ponto: { latitude: @ponto.latitude, longitude: @ponto.longitude, rua_id: @ponto.rua_id }
     assert_redirected_to ponto_path(assigns(:ponto))
   end
 

@@ -1,1 +1,1 @@
-json.extract! @rua, :id, :nome, :created_at, :updated_at
+json.extract! @rua, :id, :nome, :rotum_id, :created_at, :updated_at

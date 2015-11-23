@@ -18,7 +18,7 @@ class OnibusesControllerTest < ActionController::TestCase
 
   test "should create onibus" do
     assert_difference('Onibus.count') do
-      post :create, onibus: { ativo: @onibus.ativo, placa: @onibus.placa }
+      post :create, onibus: { ativo: @onibus.ativo, linha_id: @onibus.linha_id, placa: @onibus.placa }
     end
 
     assert_redirected_to onibus_path(assigns(:onibus))
@@ -35,7 +35,7 @@ class OnibusesControllerTest < ActionController::TestCase
   end
 
   test "should update onibus" do
-    patch :update, id: @onibus, onibus: { ativo: @onibus.ativo, placa: @onibus.placa }
+    patch :update, id: @onibus, onibus: { ativo: @onibus.ativo, linha_id: @onibus.linha_id, placa: @onibus.placa }
     assert_redirected_to onibus_path(assigns(:onibus))
   end
 

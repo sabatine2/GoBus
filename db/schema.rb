@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115132652) do
+ActiveRecord::Schema.define(version: 20151120123013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,32 +26,41 @@ ActiveRecord::Schema.define(version: 20151115132652) do
   create_table "onibuses", force: :cascade do |t|
     t.string   "placa"
     t.boolean  "ativo"
+    t.integer  "linha_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "linha_id"
   end
+
+  add_index "onibuses", ["linha_id"], name: "index_onibuses_on_linha_id", using: :btree
 
   create_table "pontos", force: :cascade do |t|
     t.float    "latitude"
     t.float    "longitude"
+    t.integer  "rua_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "rua_id"
   end
+
+  add_index "pontos", ["rua_id"], name: "index_pontos_on_rua_id", using: :btree
 
   create_table "rota", force: :cascade do |t|
     t.string   "destino"
     t.string   "origem"
+    t.integer  "linha_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "linha_id"
   end
+
+  add_index "rota", ["linha_id"], name: "index_rota_on_linha_id", using: :btree
 
   create_table "ruas", force: :cascade do |t|
     t.string   "nome"
+    t.integer  "rotum_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "ruas", ["rotum_id"], name: "index_ruas_on_rotum_id", using: :btree
 
   create_table "usuarios", force: :cascade do |t|
     t.string   "nome"
@@ -62,4 +71,8 @@ ActiveRecord::Schema.define(version: 20151115132652) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "onibuses", "linhas"
+  add_foreign_key "pontos", "ruas"
+  add_foreign_key "rota", "linhas"
+  add_foreign_key "ruas", "rota"
 end

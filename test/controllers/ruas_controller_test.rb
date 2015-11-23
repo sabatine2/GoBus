@@ -18,7 +18,7 @@ class RuasControllerTest < ActionController::TestCase
 
   test "should create rua" do
     assert_difference('Rua.count') do
-      post :create, rua: { nome: @rua.nome }
+      post :create, rua: { nome: @rua.nome, rotum_id: @rua.rotum_id }
     end
 
     assert_redirected_to rua_path(assigns(:rua))
@@ -35,7 +35,7 @@ class RuasControllerTest < ActionController::TestCase
   end
 
   test "should update rua" do
-    patch :update, id: @rua, rua: { nome: @rua.nome }
+    patch :update, id: @rua, rua: { nome: @rua.nome, rotum_id: @rua.rotum_id }
     assert_redirected_to rua_path(assigns(:rua))
   end
 

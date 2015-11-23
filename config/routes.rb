@@ -1,5 +1,34 @@
 Rails.application.routes.draw do
   resources :pontos
+  resources :pontos
+  resources :pontos
+  resources :ruas
+  resources :pontos
+  resources :ruas
+  resources :rota
+  resources :onibuses
+  resources :linhas
+  resources :usuarios
+  resources :pontos
+  resources :ruas
+  resources :rota
+  resources :onibuses
+  resources :linhas
+  resources :usuarios
+  resources :pontos
+  resources :pontos
+  resources :pontos
+  resources :ruas
+  resources :pontos
+  resources :ruas
+  resources :rota
+  resources :onibuses
+  resources :linhas
+  resources :onibuses
+  resources :usuarios
+  resources :ruas
+  resources :ruas
+  resources :pontos
   resources :ruas
   resources :rota
   resources :onibuses

@@ -69,6 +69,6 @@ class RotaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rotum_params
-      params.require(:rotum).permit(:destino, :origem)
+      params.require(:rotum).permit(:destino, :origem, :linha_id)
     end
 end

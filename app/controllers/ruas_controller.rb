@@ -69,6 +69,6 @@ class RuasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rua_params
-      params.require(:rua).permit(:nome)
+      params.require(:rua).permit(:nome, :rotum_id)
     end
 end

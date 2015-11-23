@@ -3,6 +3,7 @@ class CreateRota < ActiveRecord::Migration
     create_table :rota do |t|
       t.string :destino
       t.string :origem
+      t.references :linha, index: true, foreign_key: true
 
       t.timestamps null: false
     end
