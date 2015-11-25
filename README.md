@@ -2,6 +2,15 @@
 
 Foi enviado o link do repositório no GitHub: https://github.com/Fahantin/GoBus
 
+# Detalhes da aplicação
+Versão: 1.0
+Servidor de Deployment: Heroku gobus.herokuapp.com
+Controle de versão: GIT (Github)
+Repositório de Versionamento: https://github.com/Fahantin/GoBus
+Tecnologia Backend: Ruby on Rails
+Banco de dados: Postgres
+Tecnologia Frontend: CSS3 Bootstrap
+
 # PROBLEMAS/LIMITAÇÕES CONHECIDAS
 
 xx
